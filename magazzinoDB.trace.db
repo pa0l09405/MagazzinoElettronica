@@ -1,0 +1,244 @@
+2015-09-14 15:54:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE USER UTENTE UTENTE[*] ADMIN "; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER utente utente ADMIN [42001-188]
+2015-09-14 15:54:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE USER UTENTE 'utente'[*] ADMIN "; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER utente 'utente' ADMIN [42001-188]
+2015-09-14 15:54:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE USER 'utente'[*] 'utente' ADMIN"; expected "identifier"; SQL statement:
+CREATE USER 'utente' 'utente' ADMIN [42001-188]
+2015-09-14 15:56:31 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:377)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:360)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2434)
+	at org.h2.engine.Database.open(Database.java:671)
+	at org.h2.engine.Database.openDatabase(Database.java:268)
+	at org.h2.engine.Database.<init>(Database.java:262)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at DAO.DBManager.getConnectionDB(DBManager.java:16)
+	at UI.Terminale.main(Terminale.java:14)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 25 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:346)
+	... 20 more
+2015-09-14 16:04:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*]"; SQL statement:
+) [42000-188]
+2015-09-14 16:16:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE CIRCUITI_STAMPATI (CODICE VARCHAR(255) PRIMARY_KEY[*], PRODUTTORE VARCHAR(255), PREZZO INT NOT NULL) "; expected "FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table CIRCUITI_STAMPATI (CODICE VARCHAR(255) PRIMARY_KEY, PRODUTTORE VARCHAR(255), PREZZO INT NOT NULL) [42001-188]
+2015-09-14 16:18:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE CIRCUITI_STAMPATI(CODICE VARCHAR(255) PRIMARY_KEY[*], PRODUTTORE VARCHAR(255), PREZZO INT NOT NULL) "; expected "FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table CIRCUITI_STAMPATI(CODICE VARCHAR(255) PRIMARY_KEY, PRODUTTORE VARCHAR(255), PREZZO INT NOT NULL) [42001-188]
+2015-09-14 16:19:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLE" not found; SQL statement:
+DELETE TABLE ASSEMBLAGGIO [42102-188]
+2015-09-14 17:08:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCHEMA" not found; SQL statement:
+SELECT * FROM SCHEMA [42102-188]
+2015-09-14 22:08:15 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:377)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:360)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2434)
+	at org.h2.engine.Database.open(Database.java:671)
+	at org.h2.engine.Database.openDatabase(Database.java:268)
+	at org.h2.engine.Database.<init>(Database.java:262)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at DAO.DBManager.getConnectionDB(DBManager.java:16)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:93)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:346)
+	... 23 more
+2015-09-14 22:10:53 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:377)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:360)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2434)
+	at org.h2.engine.Database.open(Database.java:671)
+	at org.h2.engine.Database.openDatabase(Database.java:268)
+	at org.h2.engine.Database.<init>(Database.java:262)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at DAO.DBManager.getConnectionDB(DBManager.java:16)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:93)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:346)
+	... 23 more
+2015-09-14 22:12:26 database: wrong user or password; user: "UTENTE"
+org.h2.message.DbException: Wrong user name or password [28000-188]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:106)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
+	at org.h2.server.web.WebApp.login(WebApp.java:955)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebThread.process(WebThread.java:133)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 19 more
+2015-09-14 22:16:02 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:377)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:360)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2434)
+	at org.h2.engine.Database.open(Database.java:671)
+	at org.h2.engine.Database.openDatabase(Database.java:268)
+	at org.h2.engine.Database.<init>(Database.java:262)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at DAO.DBManager.getConnectionDB(DBManager.java:16)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:93)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]" [50000-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Documents/Eclipse workspaces/Workspace-2/MAIONE_N46001963/magazzinoDB.mv.db [1.4.188/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:346)
+	... 23 more
+2015-09-14 22:25:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "C001" not found; SQL statement:
+SELECT * FROM ASSEMBLAGGIO WHERE CODCIRCUITO=C001 [42122-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:838)
+	at org.h2.command.Parser.prepareCommand(Parser.java:246)
+	at org.h2.engine.Session.prepareLocal(Session.java:461)
+	at org.h2.engine.Session.prepareCommand(Session.java:403)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:96)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
+2015-09-14 22:27:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "C001" not found; SQL statement:
+SELECT * FROM ASSEMBLAGGIO WHERE CODCIRCUITO=C001 [42122-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:838)
+	at org.h2.command.Parser.prepareCommand(Parser.java:246)
+	at org.h2.engine.Session.prepareLocal(Session.java:461)
+	at org.h2.engine.Session.prepareCommand(Session.java:403)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:96)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
+2015-09-14 22:31:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: This method is not allowed for a prepared statement; use a regular statement instead. [90130-188]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:244)
+	at DAO.AssemblaggioDAO.leggi(AssemblaggioDAO.java:96)
+	at business.prodotti.GestoreProdotti.ricercaCircuitoStampato(GestoreProdotti.java:61)
+	at UI.UIUtenteRegistrato.ricercaCircuitoByCodice(UIUtenteRegistrato.java:37)
+	at UI.Terminale.main(Terminale.java:10)
